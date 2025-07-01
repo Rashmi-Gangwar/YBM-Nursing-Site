@@ -1,0 +1,95 @@
+.apply-now-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf4;
+  color: #333;
+}
+
+/* Hero Section */
+.apply-hero {
+  background: url('./images/bg-img.png') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.apply-hero h1 {
+  font-size: 42px;
+  color: #ffc107;
+}
+
+.breadcrumb {
+  color: #ffc107;
+  margin-top: 10px;
+}
+
+/* Form Section */
+.application-form-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.form-container {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.application-form textarea {
+  resize: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #fcb13b;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-info {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: #fff7e6;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.04);
+}
+
+.form-info ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.form-info li {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .application-form-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}

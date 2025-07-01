@@ -1,0 +1,175 @@
+.footer-section {
+  background-color: #fdfbf8;
+  padding: 60px 20px 30px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-logo h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.footer-logo span {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer-col p {
+  margin: 15px 0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.social-icons:hover {
+  color: #f2b233;
+  cursor: pointer;
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.sitemap-links {
+  display: flex;
+  gap: 40px;
+}
+
+.sitemap-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap-links li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.sitemap-links li:hover {
+  color: #f2b233;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-item svg {
+  color: #d5a342;
+  margin-top: 3px;
+  font-size: 1rem;
+}
+
+.contact-item strong {
+  font-weight: 600;
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.subscribe-box input {
+  flex: 1;
+  border: none;
+  padding: 12px 20px;
+  outline: none;
+  font-size: 0.95rem;
+  background-color: #ddd;
+}
+
+.subscribe-box button {
+  background-color: #f2b233;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  font-size: 0.85rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom .highlight {
+  color: #2ab087;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .sitemap-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sitemap-links ul {
+    padding-left: 10px;
+  }
+
+  .subscribe-box {
+    flex-direction: row;
+  }
+}

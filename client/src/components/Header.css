@@ -1,0 +1,160 @@
+/** Header.css */
+
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.school-logo {
+  height: 55px;
+  object-fit: contain;
+}
+
+.school-name h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.school-name p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.95rem;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  color: #222;
+}
+
+.nav-icons svg {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-icons svg:hover {
+  color: #d1a247;
+}
+
+.main-nav {
+  background-color: #fff;
+  padding: 0 40px;
+  border-top: 1px solid #ddd;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.nav-list li {
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-list li:hover::after {
+  content: '›';
+  position: absolute;
+  right: -12px;
+  color: #d1a247;
+}
+
+.nav-list li:hover {
+  color: #d1a247;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  background-color: transparent;
+  border: none;
+}
+
+.hamburger div {
+  width: 26px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    padding: 12px 20px;
+  }
+
+  .school-name,
+  .top-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 20px;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .nav-list li {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
