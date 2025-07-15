@@ -31,7 +31,9 @@ const App = () => {
   useEffect(() => {
     const getUser = async () => {
       await axios
-        .get("http://localhost:4000/api/v1/user/me", { withCredentials: true })
+        .get("https://ybm-nursing-site.onrender.com/api/v1/user/me", {
+          withCredentials: true,
+        })
         .then((res) => {
           setUser(res.data.user);
           setIsAuthenticated(true);

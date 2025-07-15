@@ -13,26 +13,26 @@ import { toast } from "react-toastify";
 
 const ContactUs = () => {
   const { isAuthenticated } = useContext(Context);
-    const {
-      register,
-      handleSubmit,
-      formState: { errors },
-    } = useForm();
-  
-    const handleRegister = async (data) => {
-      console.log(data);
-      await axios
-        .post("http://localhost:4000/api/v1/register", data, {
-          withCredentials: true,
-          headers: { "Content-Type": "application/json" },
-        })
-        .then((res) => {
-          toast.success(res.data.message);
-        })
-        .catch((error) => {
-          toast.error(error.response.data.message);
-        });
-    };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const handleRegister = async (data) => {
+    console.log(data);
+    await axios
+      .post("https://ybm-nursing-site.onrender.com/api/v1/register", data, {
+        withCredentials: true,
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((res) => {
+        toast.success(res.data.message);
+      })
+      .catch((error) => {
+        toast.error(error.response.data.message);
+      });
+  };
 
   return (
     <div className="contact-page">
@@ -102,12 +102,29 @@ const ContactUs = () => {
           Fill out this form and our specialists will contact you shortly for
           detailed consultation.
         </p>
-        <form className="contact-form" onSubmit={handleSubmit((data) => handleRegister(data))}>
+        <form
+          className="contact-form"
+          onSubmit={handleSubmit((data) => handleRegister(data))}
+        >
           <div className="input-group">
-            <input type="text" placeholder="Your name" required {...register("name")} />
-            <input type="email" placeholder="Your email" required {...register("email")}/>
+            <input
+              type="text"
+              placeholder="Your name"
+              required
+              {...register("name")}
+            />
+            <input
+              type="email"
+              placeholder="Your email"
+              required
+              {...register("email")}
+            />
           </div>
-          <textarea placeholder="Message" required {...register("message")}></textarea>
+          <textarea
+            placeholder="Message"
+            required
+            {...register("message")}
+          ></textarea>
           <button type="submit">SUBMIT</button>
         </form>
       </section>

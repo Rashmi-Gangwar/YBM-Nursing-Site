@@ -19,7 +19,7 @@ const ApplyNow = () => {
     console.log(data);
     data.phone = `+91${data.phone}`;
     await axios
-      .post("http://localhost:4000/api/v1/register", data, {
+      .post("https://ybm-nursing-site.onrender.com/api/v1/register", data, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       })
@@ -95,11 +95,7 @@ const ApplyNow = () => {
                 </label>
               </div>
             </div>
-            <select
-              name="course"
-              required
-              {...register("course")}
-            >
+            <select name="course" required {...register("course")}>
               <option value="">Select Course</option>
               <option value="B.Sc Nursing">B.Sc Nursing</option>
               <option value="G.N.M">G.N.M</option>
@@ -127,7 +123,9 @@ const ApplyNow = () => {
             <li>Verification of the email is required.</li>
             <li>You will be contacted for further process after review.</li>
             <li>Check your inbox for confirmation.</li>
-            <li>Our Team will contact with you after the Registration process.</li>
+            <li>
+              Our Team will contact with you after the Registration process.
+            </li>
           </ul>
         </div>
       </section>
