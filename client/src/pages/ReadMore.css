@@ -1,0 +1,155 @@
+.readmore-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaf4;
+  color: #333;
+}
+
+.centered-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero */
+.readmore-hero {
+  background: url('./images/bg-img.png') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.readmore-hero h1 {
+  font-size: 36px;
+  color: #ffc107;
+}
+
+.breadcrumb {
+  color: #ffc107;
+  margin-top: 10px;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Why Choose Us */
+.why-choose ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.why-choose li {
+  margin: 10px 0;
+}
+
+/* Testimonials */
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial {
+  background: #fff9e7;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+.testimonial span {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Hospital Tie-Ups */
+.tieups ul {
+  padding-left: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.tieups li {
+    list-style: none;
+}
+
+/* Career Section */
+.career-support p {
+  font-size: 18px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Announcements */
+.announcements ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* CTA */
+.quick-cta {
+  background-color: #fff3cc;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.quick-cta h3 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  background: linear-gradient(to right, #f5a623, #ffcc33);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .readmore-hero h1 {
+    font-size: 28px;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
